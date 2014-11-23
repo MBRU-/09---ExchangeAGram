@@ -25,8 +25,10 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         let request = NSFetchRequest(entityName: "FeedItem")
         let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
-        let context: NSManagedObjectContext = appDelegate.managedObjectContext!
+        let context = appDelegate.managedObjectContext!
         feedArray = context.executeFetchRequest(request, error: nil)!
+    
+// self.collectionView.reloadData()
         
     }
 
@@ -86,7 +88,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         let feedItem = FeedItem(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext!)
         feedItem.image = imageData
-        feedItem.caption = "demo caption"
+        feedItem.caption = "Capture: \(feedArray.count+1)"
         (UIApplication.sharedApplication().delegate as AppDelegate).saveContext()
         feedArray.append(feedItem)
         
@@ -108,11 +110,11 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         var cell:FeedCell = collectionView.dequeueReusableCellWithReuseIdentifier("MyCell", forIndexPath: indexPath) as FeedCell
-        let thisItem = feedArray[indexPath.row] as FeedItem
+  //      let thisItem = feedArray[indexPath.row] as FeedItem
+        let thisItem = feedArray[indexPath.item] as FeedItem
         
         cell.imageView.image = UIImage(data: thisItem.image)
         cell.captionLabel.text = thisItem.caption
-         println("feedItem: \(cell.imageView.image)")
         
         return cell
     }
