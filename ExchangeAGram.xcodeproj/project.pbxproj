@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		62D6CCE61A20C116007741F1 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6CCE51A20C116007741F1 /* FeedItem.swift */; };
 		62E162051A20E0D20038D6D5 /* Lion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 62E162041A20E0D20038D6D5 /* Lion.jpg */; };
+		7306C0A11A233E14002280EB /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7306C0A01A233E14002280EB /* FilterViewController.swift */; };
+		7306C0A31A23578E002280EB /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7306C0A21A23578E002280EB /* FilterCell.swift */; };
 		7388D68C1A1E193100F1BFFA /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7388D68B1A1E193100F1BFFA /* FeedViewController.swift */; };
 		7388D68E1A1E1EAD00F1BFFA /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7388D68D1A1E1EAD00F1BFFA /* FeedCell.swift */; };
 		7388D6901A1E32E700F1BFFA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7388D68F1A1E32E700F1BFFA /* MobileCoreServices.framework */; };
@@ -18,6 +19,7 @@
 		7393412E1A1E0DE600A0F982 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7393412D1A1E0DE600A0F982 /* Images.xcassets */; };
 		739341311A1E0DE600A0F982 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7393412F1A1E0DE600A0F982 /* LaunchScreen.xib */; };
 		7393413D1A1E0DE600A0F982 /* ExchangeAGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7393413C1A1E0DE600A0F982 /* ExchangeAGramTests.swift */; };
+		73CAB8ED1A24C08800E80FEA /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CAB8EC1A24C08800E80FEA /* FeedItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		62D6CCE51A20C116007741F1 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		62E162041A20E0D20038D6D5 /* Lion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lion.jpg; sourceTree = "<group>"; };
+		7306C0A01A233E14002280EB /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		7306C0A21A23578E002280EB /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		7388D68B1A1E193100F1BFFA /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		7388D68D1A1E1EAD00F1BFFA /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		7388D68F1A1E32E700F1BFFA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -46,6 +49,7 @@
 		739341361A1E0DE600A0F982 /* ExchangeAGramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeAGramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7393413B1A1E0DE600A0F982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7393413C1A1E0DE600A0F982 /* ExchangeAGramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeAGramTests.swift; sourceTree = "<group>"; };
+		73CAB8EC1A24C08800E80FEA /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedItem.swift; path = ../FeedItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +92,12 @@
 		739341201A1E0DE500A0F982 /* ExchangeAGram */ = {
 			isa = PBXGroup;
 			children = (
-				62D6CCE51A20C116007741F1 /* FeedItem.swift */,
+				73CAB8EC1A24C08800E80FEA /* FeedItem.swift */,
 				739341231A1E0DE500A0F982 /* AppDelegate.swift */,
 				7388D68D1A1E1EAD00F1BFFA /* FeedCell.swift */,
+				7306C0A21A23578E002280EB /* FilterCell.swift */,
 				7388D68B1A1E193100F1BFFA /* FeedViewController.swift */,
+				7306C0A01A233E14002280EB /* FilterViewController.swift */,
 				7393412A1A1E0DE500A0F982 /* Main.storyboard */,
 				7393412D1A1E0DE600A0F982 /* Images.xcassets */,
 				7393412F1A1E0DE600A0F982 /* LaunchScreen.xib */,
@@ -177,6 +183,7 @@
 				TargetAttributes = {
 					7393411D1A1E0DE500A0F982 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = T3RY7YUTLE;
 					};
 					739341351A1E0DE600A0F982 = {
 						CreatedOnToolsVersion = 6.1;
@@ -229,10 +236,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7306C0A31A23578E002280EB /* FilterCell.swift in Sources */,
+				7306C0A11A233E14002280EB /* FilterViewController.swift in Sources */,
 				739341241A1E0DE500A0F982 /* AppDelegate.swift in Sources */,
 				7388D68E1A1E1EAD00F1BFFA /* FeedCell.swift in Sources */,
 				7388D68C1A1E193100F1BFFA /* FeedViewController.swift in Sources */,
-				62D6CCE61A20C116007741F1 /* FeedItem.swift in Sources */,
+				73CAB8ED1A24C08800E80FEA /* FeedItem.swift in Sources */,
 				739341271A1E0DE500A0F982 /* ExchangeAGram.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,9 +367,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ExchangeAGram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -368,9 +380,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ExchangeAGram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

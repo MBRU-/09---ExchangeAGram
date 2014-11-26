@@ -82,12 +82,14 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
      func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         let image = info[UIImagePickerControllerOriginalImage] as UIImage
         let imageData = UIImageJPEGRepresentation(image, 1.0)
+        let thumbNailData = UIImageJPEGRepresentation(image, 0.1)
         
         let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
         let entityDescription = NSEntityDescription.entityForName("FeedItem", inManagedObjectContext: managedObjectContext!)
         
         let feedItem = FeedItem(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext!)
         feedItem.image = imageData
+        feedItem.thumbNail = thumbNailData
         feedItem.caption = "Capture: \(feedArray.count+1)"
         (UIApplication.sharedApplication().delegate as AppDelegate).saveContext()
         feedArray.append(feedItem)
@@ -110,13 +112,25 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         var cell:FeedCell = collectionView.dequeueReusableCellWithReuseIdentifier("MyCell", forIndexPath: indexPath) as FeedCell
-  //      let thisItem = feedArray[indexPath.row] as FeedItem
-        let thisItem = feedArray[indexPath.item] as FeedItem
+        let thisItem = feedArray[indexPath.row] as FeedItem
+  //      let thisItem = feedArray[indexPath.item] as FeedItem
         
         cell.imageView.image = UIImage(data: thisItem.image)
         cell.captionLabel.text = thisItem.caption
         
         return cell
+    }
+    
+    //UICollectionViewDelegate
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+//        let thisItem = feedArray[indexPath.item] as FeedItem
+        let thisItem = feedArray[indexPath.row] as FeedItem
+        
+        var filterVC = FilterViewController()
+        filterVC.thisFeedItem = thisItem
+        
+        self.navigationController?.pushViewController(filterVC, animated: false)
     }
     
 }
